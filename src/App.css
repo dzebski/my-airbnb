@@ -8,7 +8,7 @@
 }
 
 .container {
-  width: 500px;
+  width: auto;
 }
 
 .header {
@@ -57,8 +57,9 @@
 }
 
 .cards {
-  padding-left: 37px;
-  padding-bottom: 30px;
+  padding: 0 37px 40px 37px;
+  /* padding-left: 37px;
+  padding-bottom: 30px; */
   display: flex;
   gap: 18px;
 }
