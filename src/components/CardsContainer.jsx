@@ -1,40 +1,43 @@
 //
 import Card from "./Card"
-// Images
-import img1 from "./katie-zaferis.jpg"
-import img2 from "./wedding.jpg"
-import img3 from "./bike.jpg"
+// import CardsData from "./data/CardsData"
+import ScrimbaCardsData from "./data/ScrimbaCardsData"
+
 
 export default function CardsContainer() {
+    // const data = CardsData.map(card => {
+    //     return <Card
+    //         status = {card.status}
+    //         img = {card.img}
+    //         rating = {card.rating}
+    //         reviews = {card.reviews}
+    //         country = {card.country}
+    //         text = {card.text}
+    //         price = {card.price}
+    //     />
+    // })
+
+    const scrimbaData = ScrimbaCardsData.map(card => {
+        return <Card
+            key={card.id}
+            item={card}
+            // ES6 Cool Stuff here
+            {...card}
+
+
+            // status={card.openSpots}
+            // img={card.coverImg}
+            // rating={card.stats.rating}
+            // reviews={card.stats.reviewCount}
+            // country={card.location}
+            // text={card.title}
+            // price={card.price}
+        />
+    })
+
     return (
         <div className="container cards">
-            <Card
-                status = 'sold out'
-                img = {img1}
-                rating = {5.0}
-                reviews = {6}
-                country = 'USA'
-                text = 'Life lessons with Katie Zaferes'
-                price = {136}
-            />
-            <Card
-                status = 'online'
-                img = {img2}
-                rating = {4.2}
-                reviews = {42}
-                country = 'Online'
-                text = 'Learn wedding photography'
-                price = {125}
-            />
-            <Card
-                status = 'sale'
-                img = {img3}
-                rating = {4.8}
-                reviews = {2}
-                country = 'Alaska'
-                text = 'Group Mountain Biking'
-                price = {50}
-            />
+            {scrimbaData}
         </div>
     )
 }
