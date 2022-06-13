@@ -1,0 +1,91 @@
+/* For Card Component and then Props */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.card__img {
+    max-width: 176px;
+    position: relative;
+}
+
+.card__img img {
+    display: block;
+    width: 100%;
+    border-radius: 9px;
+    z-index: 1;
+}
+
+.card__img--label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 11px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 5px 6px;
+    margin: 6px;
+    text-transform: uppercase;
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card__body--ratings {
+    display: flex;
+    gap: 2px;
+}
+
+.country, .totalReviews, .rating {
+    position: relative;
+    color: #918E9B;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 13px;
+}
+
+.rating {
+    color: #222;
+}
+
+.country {
+    margin-left: 4px;
+}
+
+.country::before {
+    content: '';
+    background-color: #918E9B;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -4px;
+}
+
+.card__body--text {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 13px;
+}
+
+.card__body--price .bold {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 13px;
+}
+
+.card__body--price {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 13px;
+}
